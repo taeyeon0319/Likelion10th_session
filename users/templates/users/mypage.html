@@ -4,11 +4,7 @@
 {% block content %}
 <div class="container">
         <h1>
-            {% if 'user' in user.username and user.username != 'user' %}
-                {{ user.last_name }} {{ user.first_name }}
-            {% else %}
                 {{ user.username }}
-            {% endif %}
         </h1>
     <div>
         {% for blog in blogs %}
