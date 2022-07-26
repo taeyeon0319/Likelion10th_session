@@ -3,12 +3,39 @@
 
 {% block content %}
 <div class="container">
-        <h1>
-                {{ user.username }}
-        </h1>
+    <h1>
+        {{ user.username }}
+    <!--
+        {% if condition %}
+            {% if condition%}
+                <a href="{% url '' %}"><button type="button" class="btn btn-outline-info">언팔로우</button></a>
+            {% else %}
+                <a href="{% url '' %}"><button type="button" class="btn btn-info">팔로우</button></a>
+            {% endif %}
+        {% endif %}        
+    -->
+
+<!--
+    <div class="container">
+        <h3> 팔로워{{ code }}명</h3>
+        {%for follower in user.profile.followers.all %}
+            <a href="{% url ' ' %}">{{ code }}</a>
+        {% endfor %}
+
+        <h3>팔로잉{{ code }}명</h3>
+        {% for following in user.profile.followings.all %}
+            <a href="{%url ' ' %}">{{ code }}</a>
+        {% endfor %}
+    </div>
+-->
+    </h1><hr>
+
+
+
     <div>
+        <h3>{{user.username}}님의 작성글</h3>
         {% for blog in blogs %}
-            <a href="{%url 'main:detail' blog.id%}">{{blog.title}}</a><hr>
+            <a href="{%url 'main:detail' blog.id%}">{{blog.title}}</a><br>
         {%endfor%}
     </div>
 </div>
