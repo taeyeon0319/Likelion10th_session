@@ -19,12 +19,12 @@
     <div class="container">
         <h3> 팔로워{{ code }}명</h3>
         {%for follower in user.profile.followers.all %}
-            <a href="{% url ' ' %}">{{ code }}</a>
+            <a href="{% url 'users:mypage' %}">{{ code }}</a>
         {% endfor %}
 
         <h3>팔로잉{{ code }}명</h3>
         {% for following in user.profile.followings.all %}
-            <a href="{%url ' ' %}">{{ code }}</a>
+            <a href="{%url 'users:mypage' %}">{{ code }}</a>
         {% endfor %}
     </div>
 -->

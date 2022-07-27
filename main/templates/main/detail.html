@@ -32,8 +32,8 @@
     <div>
         {% for comment in comments %}
         <div>
-            <p>{% if blog.writer %}
-                작성자 : <!--유저프로필로 접속--> {{ blog.writer }}
+            <p>{% if comment.writer %}
+                작성자 : <!--유저프로필로 접속--> {{ comment.writer }}
                 {% else %}
                 작성자 : 알 수 없음
                 {% endif %}
